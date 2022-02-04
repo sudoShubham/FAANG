@@ -19,3 +19,35 @@
 // console.log(continent);
 // console.log(population);
 //***************************************************************************************************************** */
+//FALSY VALUES------------------------------------------------------------------------------
+//undefined, 0, '' , NaN and null These 5 are falsy values.
+// console.log(Boolean(""));
+
+//Switch statement
+let day = "tuesday";
+switch (day) {
+  case "sunday":
+  case "saturday":
+    console.log(`Enjoy the weekend!`);
+    break;
+
+  case "monday":
+    console.log("Prepare JS Basics.");
+    break;
+
+  case "tuesday":
+  case "wednesay":
+    console.log("Prepare Advanse JS");
+    break;
+
+  case "thursday":
+    console.log("Enjoy thursday.");
+    break;
+
+  case "friday":
+    console.log("Prepare weekend");
+    break;
+
+  default:
+    console.log("Not a valid day");
+}
