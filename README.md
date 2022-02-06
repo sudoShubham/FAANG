@@ -1,2 +1,3 @@
-1. DSA                                  ------------------------------[15/03/2022]
-2. Competitive Programming              ------------------------------[30/12/2022]
+1. DSA
+2. C++ STL
+3. Competitive Programming
