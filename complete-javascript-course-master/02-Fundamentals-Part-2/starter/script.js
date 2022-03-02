@@ -55,6 +55,7 @@ function makeJuice(orange, mango) {
 console.log(makeJuice(4, 2));
 */
 
+/*
 //Coding Challenge
 const calcAverage = (s1, s2, s3) => {
   return (s1 + s2 + s3) / 3;
@@ -75,3 +76,22 @@ const kAvg = calcAverage(23, 34, 27);
 
 const res = checkWinner(dAvg, kAvg);
 console.log(res);
+*/
+
+//Arrays
+
+const ageCalculator = (birthYear) => 2022 - birthYear;
+
+const friends = ["Ram", "Sham", "Gopi", "Chandu"];
+const birthYears = new Array(2000, 1999, 1998, 1975);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// const myData = [friends[0], 2022 - 1999, "Engineer", friends];
+// console.log(myData);
+// console.log(typeof myData);
+console.log(birthYears[0]);
+const age = new Array(ageCalculator(birthYears[0]));
+
+console.log(age);
