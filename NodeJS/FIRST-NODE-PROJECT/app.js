@@ -1,7 +1,25 @@
 const http = require("http");
-const routes = require("./routes");
+const path = require("path");
 
-const server = http.createServer(routes);
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const adminRouter = require("./routes/adminRoutes");
+const userRouter = require("./routes/userRoutes");
+const rootDir = require("./util/path");
+
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/admin", adminRouter);
+app.use(userRouter);
+
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(rootDir, "views", "404.html"));
+});
+
+const server = http.createServer(app);
 server.listen(3000, () => {
-  console.log("Server started on port 3000");
+  console.log("Server started on port: 3000");
 });
