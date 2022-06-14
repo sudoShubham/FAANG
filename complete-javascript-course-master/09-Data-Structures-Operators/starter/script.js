@@ -155,6 +155,7 @@ const {
 //   console.log(`${i + 1}: ${el}`);
 // }
 
+/*
 const days = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? 'Closed';
@@ -167,3 +168,21 @@ const entries = Object.entries(restaurant.openingHours);
 for (const [key, { open, close }] of entries) {
   console.log(key, open, close);
 }
+*/
+
+const rest = new Map();
+rest.set(1, 'pass');
+rest.set(2, 'fail').set(3, 'Pass');
+rest.set([1, 2, 3], 'Test Value');
+rest.set(document.querySelector('h1'), 'heading ');
+
+const question = new Map([
+  ['Question', 'Which is best programming language?'],
+  [1, 'Js'],
+  [2, 'Python'],
+  ['Correct', 1],
+  [true, 'Correct'],
+  [false, 'Wrong'],
+]);
+
+console.log(question);
