@@ -170,6 +170,7 @@ for (const [key, { open, close }] of entries) {
 }
 */
 
+/*
 const rest = new Map();
 rest.set(1, 'pass');
 rest.set(2, 'fail').set(3, 'Pass');
@@ -186,3 +187,28 @@ const question = new Map([
 ]);
 
 console.log(question);
+*/
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+const events = [...new Set(gameEvents.values())];
+gameEvents.delete(64);
+// let sum = 0;
+// for (const [k, v] of gameEvents) {
+//   sum += k;
+// }
+console.log(
+  `Event happend at an average every ${90 / gameEvents.size} minutes.`
+);
