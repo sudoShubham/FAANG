@@ -24,7 +24,6 @@ int fun2(int n){
 //Tree Recursion    time: O(2^n)    space: length of stack = O(n)
 void fun3(int n){
         
-
     if(n>0){
         cout<<n<<" ";
         fun3(n-1);
@@ -65,8 +64,8 @@ int fun(int n){
 
 int main(){
     // fun1(4);
-    // fun2(3);
+    fun2(3);
     // fun3(4);
     // funA(20);
-    cout<<fun(95);
+    // cout<<fun(95);
 }
