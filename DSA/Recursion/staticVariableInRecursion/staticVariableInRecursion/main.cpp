@@ -5,10 +5,20 @@
 //  Created by Shubham on 20/07/22.
 //
 
-#include <iostream>
+#include<iostream>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+int fun(int n){
+    static int x = 0;
+    if(n>0){
+        x++;
+        return fun(n-1) + x;
+    }
     return 0;
+}
+
+int main(){
+    int y = 5;
+    cout<<fun(y);
 }
