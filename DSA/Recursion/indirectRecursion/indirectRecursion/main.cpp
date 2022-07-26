@@ -1,14 +1,27 @@
-//
-//  main.cpp
-//  indirectRecursion
-//
-//  Created by Shubham on 25/07/22.
-//
+#include<iostream>
+using namespace std;
 
-#include <iostream>
+void fun2(int n);
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+
+void fun1(int n){
+    if(n>0){
+        cout<<n<<"\t";
+        fun2(n-1);
+    }
 }
+
+
+void fun2(int n){
+    if(n>0){
+        cout<<n<<"\t";
+        fun1(n/2);
+    }
+}
+
+
+int main(){
+    fun1(20);
+}
+
