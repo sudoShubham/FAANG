@@ -1,14 +1,24 @@
-//
-//  main.cpp
-//  test
-//
-//  Created by Shubham on 28/07/22.
-//
+#include<iostream>
+using namespace std;
 
-#include <iostream>
+void sortArr(int arr[],int n){
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]>arr[j]){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+}
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+int main(){
+    int arr[] = {1,2,3,10,4,4,5,6};
+    int size = 8;
+    sortArr(arr,size);
+    for(int i=0;i<size;i++){
+        cout<<arr[i]<<" ";
+    }
 }
